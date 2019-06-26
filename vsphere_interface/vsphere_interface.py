@@ -1,3 +1,4 @@
+"""Provides an object for interacting with the vSphere API"""
 import ssl
 
 from pyVim import connect
@@ -5,7 +6,7 @@ from pyVmomi import vim
 
 
 class vSphereInterface:
-
+    """Defines API object"""
     def __init__(self, username, password, server):
         self.vsphere = self.auth(username, password, server)
         self.content = self.vsphere.RetrieveContent()
